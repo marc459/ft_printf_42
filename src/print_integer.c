@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_integer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcos <marcos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 15:12:20 by msantos-          #+#    #+#             */
-/*   Updated: 2020/02/28 21:01:22 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/24 01:09:19 by marcos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	checkflags_minus_on_i(t_printf *f, int integer)
 		ft_putchar('-');
 		f->len++;
 	}
-	ft_putstr(ft_itoa_without_minus(integer), f);
+	ft_putstrcounter(ft_itoa_without_minus(integer), f);
 	check_widthflag_i(f, integer);
 	f->flag_precision = 1;
 	check_zeroflag_i(f, integer);
@@ -38,7 +38,7 @@ void	checkflags_minus_off_i(t_printf *f, int integer)
 		ft_putchar('-');
 		f->len++;
 	}
-	ft_putstr(ft_itoa_without_minus(integer), f);
+	ft_putstrcounter(ft_itoa_without_minus(integer), f);
 }
 
 void	print_integer(t_printf *f)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_hexadecimal.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcos <marcos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 18:16:30 by msantos-          #+#    #+#             */
-/*   Updated: 2020/02/24 20:50:15 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/24 01:09:01 by marcos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	checkflags_x(t_printf *f, int num, char *string)
 	else if (f->flag_minus == 1 || f->width < 0)
 	{
 		f->width = (f->width < 0) ? f->width * (-1) : f->width;
-		ft_putstr(check_precisionflag_x(f, string), f);
+		ft_putstrcounter(check_precisionflag_x(f, string), f);
 		check_widthflag_x(f, string);
 		f->flag_precision = 1;
 		check_zeroflag_x(f, string);
@@ -62,7 +62,7 @@ void	checkflags_x(t_printf *f, int num, char *string)
 	{
 		check_zeroflag_x(f, string);
 		check_widthflag_x(f, string);
-		ft_putstr(check_precisionflag_x(f, string), f);
+		ft_putstrcounter(check_precisionflag_x(f, string), f);
 	}
 }
 

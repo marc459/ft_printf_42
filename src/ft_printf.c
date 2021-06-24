@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcos <marcos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/26 18:51:23 by msantos-          #+#    #+#             */
-/*   Updated: 2020/02/23 23:25:01 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/24 01:06:33 by marcos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		ft_printf(const char *format, ...)
 	}
 	else
 	{
-		ft_putstr(format, f);
+		ft_putstrcounter(format, f);
 		f->len = ft_strlen(format);
 	}
 	return (f->len);

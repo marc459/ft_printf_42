@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_ptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcos <marcos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 21:56:51 by msantos-          #+#    #+#             */
-/*   Updated: 2020/03/09 16:08:30 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/24 01:09:46 by marcos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,22 @@ void	checkflags_p(t_printf *f, int num, char *string)
 	{
 		string = ft_strdup("");
 		check_widthflag_p(f, string);
-		ft_putstr("0x", f);
+		ft_putstrcounter("0x", f);
 	}
 	else if (f->flag_minus == 1)
 	{
-		ft_putstr("0x", f);
+		ft_putstrcounter("0x", f);
 		string = check_precisionflag_p(f, string);
-		ft_putstr(string, f);
+		ft_putstrcounter(string, f);
 		check_widthflag_p(f, string);
 	}
 	else
 	{
 		check_zeroflag_p(f, string);
 		check_widthflag_p(f, string);
-		ft_putstr("0x", f);
+		ft_putstrcounter("0x", f);
 		string = check_precisionflag_p(f, string);
-		ft_putstr(string, f);
+		ft_putstrcounter(string, f);
 	}
 }
 

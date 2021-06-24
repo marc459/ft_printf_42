@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_string.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcos <marcos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 14:18:15 by msantos-          #+#    #+#             */
-/*   Updated: 2020/02/24 20:20:12 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/24 01:09:54 by marcos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ void	print_string(t_printf *f)
 		if (f->width < 0)
 			f->width = f->width * (-1);
 		string = check_precisionflag_s(f, string);
-		ft_putstr(string, f);
+		ft_putstrcounter(string, f);
 		check_widthflag_s(f, string);
 	}
 	else
 	{
 		string = check_precisionflag_s(f, string);
 		check_widthflag_s(f, string);
-		ft_putstr(string, f);
+		ft_putstrcounter(string, f);
 	}
 }

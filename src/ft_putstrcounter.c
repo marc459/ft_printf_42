@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putstrcounter.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcos <marcos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/14 17:40:18 by msantos-          #+#    #+#             */
-/*   Updated: 2019/11/18 20:22:32 by msantos-         ###   ########.fr       */
+/*   Created: 2021/06/24 01:01:37 by marcos            #+#    #+#             */
+/*   Updated: 2021/06/24 01:01:44 by marcos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_putstrcounter(const char *s, t_printf *f)
 {
-	void	*str;
-	size_t	i;
+	size_t i;
 
 	i = 0;
-	str = malloc(size * count);
-	if (str == NULL)
-		return (str);
-	ft_bzero(str, size * count);
-	return (str);
+	if (s == NULL)
+		return ;
+	while (i < ft_strlen(s))
+	{
+		write(1, &s[i], 1);
+		f->len++;
+		i++;
+	}
 }

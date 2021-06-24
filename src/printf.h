@@ -3,17 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   printf.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcos <marcos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/26 07:11:34 by msantos-          #+#    #+#             */
-/*   Updated: 2020/02/24 21:23:02 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/24 01:53:19 by marcos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINTF_H
 # define PRINTF_H
 # include <stdarg.h>
-# include "../libft/libft.h"
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <strings.h>
+# include "../../libft_42/libft.h"
 
 typedef	struct	s_printf
 {
@@ -33,7 +37,7 @@ void			initialize_flags(t_printf *f);
 void			flag_sorting(const char *format, t_printf *f);
 void			variable_sorting(const char *format, t_printf *f);
 void			print_integer(t_printf *f);
-void			ft_putstr(const char *s, t_printf *f);
+void			ft_putstrcounter(const char *s, t_printf *f);
 void			print_string(t_printf *f);
 void			check_widthflag_s(t_printf *f, char *str);
 char			*check_precisionflag_s(t_printf *f, const char *str);
