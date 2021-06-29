@@ -5,7 +5,7 @@ FLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
 
 SRC_PATH = ./src
-LIB_PATH = ../libft_423
+LIB_PATH = ../libft_42
 INC_PATH = ./src
 OBJ_PATH = ./objs
 
